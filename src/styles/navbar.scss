@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.navbar {
+    font-family: 'Lato', sans-serif; // Apply Lato font to navbar
+    background-color: #2F302C;
+    ; // Grey color for navbar
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    height: 8vh;
+  
+    .left {
+      display: flex;
+      align-items: center;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 9vh;
+      margin-left: 0px;
+      width: 100%;
+    }
+    .logoImg{
+      width: 25px; /* Adjust width as needed */
+      height: 25px; /* Adjust height as needed */
+      margin-right: 10px; /* Adjust margin as needed */
+    }
+    
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin-right: 50px;
+      font-size: 0.9rem; 
+      a {
+        color: white; // Set color to white
+        text-decoration: none; // Remove underline from links
+      }
+      &:hover a {
+        color: skyblue; // Change color to sky blue on hover
+      }
+
+      &.more {
+        position: relative;
+        cursor: pointer;
+  
+        ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #333;
+          display: none;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+          li {
+            margin: 5px 0;
+            a {
+              color: white;
+              text-decoration: none;
+  
+              &:hover {
+                color: #333;
+                background-color: white;
+              }
+            }
+          }
+        }
+  
+        &:hover ul {
+          display: block;
+        }
+      }
+    
+    }
+  
+    .hidden-items {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      z-index: 1;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .more:hover .hidden-items {
+      display: block;
+    }
+  
+    .right {
+      display: flex; /* Added flex display to align search bar */
+      align-items: center;
+        .search-bar {
+          position: relative; // Position the search bar container relative
+          display: flex;
+          align-items: center;
+    
+          .search-icon {
+            width: 12px; // Adjust the size of the search icon
+            margin-right: 10px; // Adjust margin as needed
+            position: absolute; // Position the search icon absolute
+            top: 2px; // Adjust position to be above the underline
+            left: 0; // Position the search icon at the left of the search bar
+            filter: invert(1); // Invert the color to white
+
+
+        }
+    
+          .search-input {
+            border: none;
+            border-bottom: 1px solid white; // White underline
+            background-color: transparent; // Remove input background
+            color: white; // Set text color to white
+            padding-left: 20px; // Adjust padding-left to accommodate the icon
+            padding-bottom: 10px;
+            // padding-right: 10px;
+            top: -3px;
+            width: 40vh; // Make input occupy the remaining space
+
+          }
+          
+        }
+      }
+  }
+  
